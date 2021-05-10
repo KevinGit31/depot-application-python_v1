@@ -9,13 +9,13 @@ Vagrant.configure('2') do |config|
 
     config.vm.network 'forwarded_port',guest: 8080,host: 5001,host_ip: 'localhost'
 
-    config.vm.network 'private_network',ip: '172.30.1.3'
+    config.vm.network 'private_network',ip: '172.30.1.5'
 
     # Mettre en place un cache pour APT
     # config.vm.synced_folder 'v-cache', '/var/cache/apt'
-    config.vm.define 'jenkins' do |machine|
+    config.vm.define 'serveur-applicatif' do |machine|
 
-        machine.vm.hostname = 'jenkins'
+        machine.vm.hostname = 'serveur-applicatif'
         # Limiter la RAM de la VM Vanessa David Avril 2021
 
         machine.vm.provider 'virtualbox' do |vb|
