@@ -1,0 +1,24 @@
+[
+   {
+      "id":0,
+      "hostname":"hostnameM",
+      "ip":"ipMichael",
+      "nombre_cpu":"nombrecpu",
+      "taille_ram":"tailleram",
+      "nombre_disque_dur":"nombredisquedur",
+      "taille_disque_dur":"tailledisquedur",
+      "os":"osMichael",
+      "version_os":"versionos"
+   },
+   {
+      "id":1,
+      "hostname":"Michael",
+      "ip":"ipMichael",
+      "nombre_cpu":"nombrecpu",
+      "taille_ram":"tailleram",
+      "nombre_disque_dur":"nombredisquedur",
+      "taille_disque_dur":"tailledisquedur",
+      "os":"osMichael",
+      "version_os":"versionos"
+   }
+]
