@@ -19,3 +19,13 @@ apt update -y
 
 # install python
 apt install python3 python3-dev python3-pip git -q -y
+apt remove -y python 
+
+# positionnement de python3 et pip3 dans le profil
+
+ln -s /usr/bin/python3 /usr/bin/python
+echo "alias pip=pip3" > ~/.bashrc
+
+#install utilitaire de test dont flask pour expostion de l'api
+pip install flask pytest 
+#pip install fastapi

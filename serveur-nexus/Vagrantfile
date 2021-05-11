@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Provision
   # config.vm.provision :shell, :path => "install.sh"
   
-  machine.vm.hostname = 'nexus'
+  config.vm.hostname = 'nexus'
   
   # Shared folder
   config.vm.synced_folder "vagrant-rsync/", "/home/rsync", create: true
