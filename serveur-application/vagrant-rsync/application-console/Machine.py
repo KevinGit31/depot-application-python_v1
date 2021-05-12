@@ -1,6 +1,6 @@
 class Machine:
     
-    def __init__(self, id, hostname, ip, nombre_cpu, taille_ram, nombre_disque_dur, taille_disque_dur, os, version_os):
+    def __init__(self, hostname, ip, nombre_cpu, taille_ram, nombre_disque_dur, taille_disque_dur, os, version_os):
         self._id = id
         self._hostname = hostname
         self._ip = ip
@@ -10,10 +10,6 @@ class Machine:
         self._taille_disque_dur = taille_disque_dur
         self._os = os
         self._version_os = version_os
-
-    @property
-    def id(self):
-        return self._id
 
     @property
     def hostname(self):
