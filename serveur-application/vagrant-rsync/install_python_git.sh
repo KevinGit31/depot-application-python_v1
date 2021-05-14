@@ -36,4 +36,19 @@ echo "alias pip=pip3" > ~/.bashrc
 pip install flask pytest 
 pip install fastapi uvicorn
 
+sudo apt install ufw
+
+	#Activer ufw
+	echo y | sudo ufw enable
+	if [ $? -gt 0 ]; then
+		echo "Erreur lors de l'activation de UFW"
+		exit 1;
+	fi
+
+	#Ouverture du port 8000
+	sudo ufw allow 8000
+
+	# Verification de l'ouverture des ports
+	sudo ufw status numbered
+
 echo "Success"

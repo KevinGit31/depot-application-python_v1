@@ -1,6 +1,5 @@
 from fastapi.encoders import jsonable_encoder
-import socket
-
+# Import app
 import Machine
 import bdd_file
 
@@ -37,13 +36,13 @@ def get_machine(hostname):
 
 def update_machine(hostname, machine: Machine):
     """
-        Permet la mise à jour d'une machine existante à l'aide de son hostname
+        Methode permettant la mise à jour d'une machine existante à l'aide de son hostname
     :param hostname: nom de la machine sur laquelle on va faire les modifications
     :param machine: nouvelle machine
     :return:
     """
-    update_item_encoded = jsonable_encoder(machine)
-    listMachinesFomFile[return_index_machine(hostname)] = update_item_encoded
+    update_machine_encoded = jsonable_encoder(machine)
+    listMachinesFomFile[return_index_machine(hostname)] = update_machine_encoded
     return bdd_file.write_bd(listMachinesFomFile)
 
 

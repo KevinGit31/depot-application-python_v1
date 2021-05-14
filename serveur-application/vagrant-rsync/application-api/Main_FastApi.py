@@ -4,7 +4,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 
-# Import models app
+# Import app
 from Machine import MachineFastApi
 import Crud_FastApi
 
@@ -26,11 +26,20 @@ async def root():
 
 @app.get("/machines")
 async def read_machines():
+    """
+        API qui va permettre d'afficher la liste des machines du parc informatique
+    :return: liste de machines
+    """
     return Crud_FastApi.get_machines()
 
 
 @app.get("/machine/{hostname}", response_model=MachineFastApi)
 async def read_machine(hostname: str):
+    """
+        API qui va permettre d'afficher une machine par son hostname
+     :param hostname: on récupère l'hostname saisi par l'utilisateur
+    :return: machine
+    """
     if Crud_FastApi.is_exists_machine(hostname):
         return Crud_FastApi.get_machine(hostname)
     else:
@@ -40,8 +49,8 @@ async def read_machine(hostname: str):
 @app.post("/machine/")
 async def create_machine(machine: MachineFastApi):
     """
-        Methode qui va permettre de créer une nouvelle machine en entrant toutes les informations qui caracterisent une machine
-     :param machine: on récupère l'hostname saisi par l'utilisateur
+        API permettant de créer une nouvelle
+     :param machine: on récupère la machine saisie par l'utilisateur
     :return: machine
     """
     if Crud_FastApi.is_exists_machine(machine.hostname):
@@ -56,6 +65,12 @@ async def create_machine(machine: MachineFastApi):
 
 @app.put("/machine/{hostname}", response_model=MachineFastApi)
 async def update_machine(hostname: str, machine: MachineFastApi):
+    """
+        API permettant la mise à jour d'une machine existante à l'aide de son hostname
+    :param hostname: nom de la machine sur laquelle on va faire les modifications
+    :param machine: nouvelle machine
+    :return:
+    """
     if Crud_FastApi.is_exists_machine(hostname):
         if Crud_FastApi.is_valid_ipv4_address(machine.ip):
             Crud_FastApi.update_machine(hostname, machine)
@@ -68,6 +83,11 @@ async def update_machine(hostname: str, machine: MachineFastApi):
 
 @app.delete("/machine/{hostname}")
 async def delete_machine(hostname: str):
+    """
+        API permettant la suppression d'une machine à l'aide de son hostname
+    :param hostname: nom de la machine
+    :return:
+    """
     if Crud_FastApi.is_exists_machine(hostname):
         Crud_FastApi.delete_machine(hostname)
     else:
@@ -75,6 +95,13 @@ async def delete_machine(hostname: str):
 
 
 def http_exception(code: int, detail_code: str, headers_message: str):
+    """
+        Méthode permettant d'afficher les exceptions HTTP
+    :param code: code d'erreur
+    :param detail_code: detail code
+    :param headers_message: headers message
+    :return:
+    """
     raise HTTPException(
         status_code=code,
         detail=detail_code,
@@ -82,4 +109,7 @@ def http_exception(code: int, detail_code: str, headers_message: str):
     )
 
 
+"""
+    Démarrage de l'application
+"""
 uvicorn.run(app)

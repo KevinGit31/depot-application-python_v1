@@ -40,8 +40,8 @@
         "version_os": "string"
     },
     {
-        "hostname": "exemple",
-        "ip": "12.2.0.1",
+        "hostname": "testput",
+        "ip": "127.1.12.14",
         "nombre_cpu": 0,
         "taille_ram": 0,
         "nombre_disque_dur": 0,
@@ -51,16 +51,6 @@
     },
     {
         "hostname": "machine1",
-        "ip": "125.0.0.12",
-        "nombre_cpu": 0,
-        "taille_ram": 0,
-        "nombre_disque_dur": 0,
-        "taille_disque_dur": 0,
-        "os": "string",
-        "version_os": "string"
-    },
-    {
-        "hostname": "machine2",
         "ip": "125.0.0.12",
         "nombre_cpu": 0,
         "taille_ram": 0,
@@ -84,6 +74,26 @@
         "ip": "142.5.1.78",
         "nombre_cpu": 0,
         "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "exemple12",
+        "ip": "124.0.1.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "machine12",
+        "ip": "124.0.1.12",
+        "nombre_cpu": 0,
+        "taille_ram": 15,
         "nombre_disque_dur": 0,
         "taille_disque_dur": 0,
         "os": "string",
