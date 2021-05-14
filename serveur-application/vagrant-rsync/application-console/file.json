@@ -18,5 +18,15 @@
         "taille_disque_dur": "tailledisquedur",
         "os": "osMichael",
         "version_os": "versionos"
+    },
+    {
+        "hostname": "parfait",
+        "ip": "147.12.0.12",
+        "nombre_cpu": 45,
+        "taille_ram": 55,
+        "nombre_disque_dur": 55,
+        "taille_disque_dur": 55,
+        "os": "55",
+        "version_os": "22"
     }
 ]

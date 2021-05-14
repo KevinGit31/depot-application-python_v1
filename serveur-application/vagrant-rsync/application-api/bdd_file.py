@@ -1,4 +1,4 @@
-import os 
+import os
 import json
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
