@@ -22,13 +22,13 @@ apt update
 apt install -y unzip
  
 # install python
-apt install python3 python3-dev python3-pip git -q
+apt install python3 python3-dev python3-pip git -q -y
 
 ## Récupération de la dernière version
 
 wget https://services.gradle.org/distributions/gradle-${VERSION}-bin.zip -P /tmp
 
-unzip -d -y /opt/gradle /tmp/gradle-${VERSION}-bin.zip
+unzip -d /opt/gradle /tmp/gradle-${VERSION}-bin.zip
 
 # Faire pointer le lien vers la dernière version de gradle
 
@@ -43,3 +43,5 @@ echo "export PATH=/opt/gradle/latest/bin:${PATH}" > /etc/profile.d/gradle.sh
 chmod +x /etc/profile.d/gradle.sh
 
 source /etc/profile.d/gradle.sh
+
+echo "Success"

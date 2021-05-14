@@ -50,7 +50,7 @@
         "version_os": "string"
     },
     {
-        "hostname": "apitest",
+        "hostname": "machine1",
         "ip": "125.0.0.12",
         "nombre_cpu": 0,
         "taille_ram": 0,
@@ -60,7 +60,7 @@
         "version_os": "string"
     },
     {
-        "hostname": "inversion",
+        "hostname": "machine2",
         "ip": "125.0.0.12",
         "nombre_cpu": 0,
         "taille_ram": 0,
@@ -70,7 +70,7 @@
         "version_os": "string"
     },
     {
-        "hostname": "inversion",
+        "hostname": "machine5",
         "ip": "125.0.0.12",
         "nombre_cpu": 0,
         "taille_ram": 0,
@@ -80,8 +80,8 @@
         "version_os": "string"
     },
     {
-        "hostname": "inversion",
-        "ip": "125.0.0.12",
+        "hostname": "string",
+        "ip": "142.5.1.78",
         "nombre_cpu": 0,
         "taille_ram": 0,
         "nombre_disque_dur": 0,
