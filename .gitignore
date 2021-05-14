@@ -2,3 +2,6 @@ serveur-integration/.*
 serveur-nexus/.*
 serveur-application/.*
 serveur-application/disk2.vdi
+serveur-application/vagrant-rsync/application-console/.*
+serveur-application/vagrant-rsync/application-console/__*
+serveur-application/vagrant-rsync/application-console/venv/*
