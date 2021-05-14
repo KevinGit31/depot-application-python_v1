@@ -6,7 +6,7 @@ from fastapi.encoders import jsonable_encoder
 
 # Import models app
 from Machine import MachineFastApi
-import Crud_FastApi
+import crudFastApi
 
 app = FastAPI()
 
@@ -26,24 +26,24 @@ async def root():
 
 @app.get("/machines")
 async def read_machines():
-    return Crud_FastApi.get_machines()
+    return crudFastApi.get_machines()
 
 
 @app.get("/machine/{hostname}", response_model=MachineFastApi)
 async def read_machine(hostname: str):
-    if Crud_FastApi.is_exists_machine(hostname):
-        return Crud_FastApi.get_machine(hostname)
+    if crudFastApi.is_exists_machine(hostname):
+        return crudFastApi.get_machine(hostname)
     else:
         http_exception(400, "Machine not exists", "My Error")
 
 
 @app.post("/machine/")
 async def create_machine(machine: MachineFastApi):
-    if Crud_FastApi.is_exists_machine(machine.hostname):
+    if crudFastApi.is_exists_machine(machine.hostname):
         http_exception(400, "Machine already  exists", "My Error")
     else:
-        if Crud_FastApi.is_valid_ipv4_address(machine.ip):
-            Crud_FastApi.create_machine(machine)
+        if crudFastApi.is_valid_ipv4_address(machine.ip):
+            crudFastApi.create_machine(machine)
             return machine
         else:
             http_exception(400, "Address IP not valid", "My Error")
@@ -51,9 +51,9 @@ async def create_machine(machine: MachineFastApi):
 
 @app.put("/machine/{hostname}", response_model=MachineFastApi)
 async def update_machine(hostname: str, machine: MachineFastApi):
-    if Crud_FastApi.is_exists_machine(hostname):
-        if Crud_FastApi.is_valid_ipv4_address(machine.ip):
-            Crud_FastApi.update_machine(hostname, machine)
+    if crudFastApi.is_exists_machine(hostname):
+        if crudFastApi.is_valid_ipv4_address(machine.ip):
+            crudFastApi.update_machine(hostname, machine)
             return machine
         else:
             http_exception(400, "Address IP not valid", "My Error")
@@ -63,8 +63,8 @@ async def update_machine(hostname: str, machine: MachineFastApi):
 
 @app.delete("/machine/{hostname}")
 async def delete_machine(hostname: str):
-    if Crud_FastApi.is_exists_machine(hostname):
-        Crud_FastApi.delete_machine(hostname)
+    if crudFastApi.is_exists_machine(hostname):
+        crudFastApi.delete_machine(hostname)
     else:
         http_exception(400, "Machine not exists", "My Error")
 

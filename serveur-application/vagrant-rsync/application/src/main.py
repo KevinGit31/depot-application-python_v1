@@ -1,4 +1,5 @@
 import crud
+import Applications
 
 
 def print_hi(name):
@@ -46,11 +47,12 @@ if __name__ == '__main__':
             data = crud.update_machine(hostname)
             print(str(data))
         elif choice_user == 6:
-            print("applinexus")
+            print_hi("Voici la liste des applications sur le serveur de depot nexus")
+            Applications.Application.getAllapplicationFromNexus()
         elif choice_user == 7:
             print("Aurevoir !")
             break
         else:
-            print("Action répertorié, aurevoir!")
+            print("Action non répertorié, aurevoir!")
             break
 
