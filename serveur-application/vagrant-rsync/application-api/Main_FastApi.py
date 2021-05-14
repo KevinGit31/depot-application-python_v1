@@ -39,6 +39,11 @@ async def read_machine(hostname: str):
 
 @app.post("/machine/")
 async def create_machine(machine: MachineFastApi):
+    """
+        Methode qui va permettre de créer une nouvelle machine en entrant toutes les informations qui caracterisent une machine
+     :param machine: on récupère l'hostname saisi par l'utilisateur
+    :return: machine
+    """
     if Crud_FastApi.is_exists_machine(machine.hostname):
         http_exception(400, "Machine already  exists", "My Error")
     else:
