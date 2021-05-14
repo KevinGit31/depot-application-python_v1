@@ -31,8 +31,7 @@ async def read_machines():
 
 @app.get("/machine/{hostname}", response_model=MachineFastApi)
 async def read_machine(hostname: str):
-    if Crud_FastApi.return_index_machine(hostname):
-
+    if Crud_FastApi.is_exists_machine(hostname):
         return Crud_FastApi.get_machine(hostname)
     else:
         http_exception(400, "Machine not exists", "My Error")
@@ -40,7 +39,7 @@ async def read_machine(hostname: str):
 
 @app.post("/machine/")
 async def create_machine(machine: MachineFastApi):
-    if Crud_FastApi.return_index_machine(machine.hostname):
+    if Crud_FastApi.is_exists_machine(machine.hostname):
         http_exception(400, "Machine already  exists", "My Error")
     else:
         if Crud_FastApi.is_valid_ipv4_address(machine.ip):
@@ -52,17 +51,19 @@ async def create_machine(machine: MachineFastApi):
 
 @app.put("/machine/{hostname}", response_model=MachineFastApi)
 async def update_machine(hostname: str, machine: MachineFastApi):
-    if Crud_FastApi.return_index_machine(hostname):
-        # result = {"hostname": hostname, "machine": machine}
-        Crud_FastApi.update_machine(hostname, machine)
-        return machine
+    if Crud_FastApi.is_exists_machine(hostname):
+        if Crud_FastApi.is_valid_ipv4_address(machine.ip):
+            Crud_FastApi.update_machine(hostname, machine)
+            return machine
+        else:
+            http_exception(400, "Address IP not valid", "My Error")
     else:
         http_exception(400, "Machine not exists", "My Error")
 
 
 @app.delete("/machine/{hostname}")
 async def delete_machine(hostname: str):
-    if Crud_FastApi.return_index_machine(hostname):
+    if Crud_FastApi.is_exists_machine(hostname):
         Crud_FastApi.delete_machine(hostname)
     else:
         http_exception(400, "Machine not exists", "My Error")

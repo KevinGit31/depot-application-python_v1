@@ -5,3 +5,7 @@ serveur-application/disk2.vdi
 serveur-application/vagrant-rsync/application-console/.*
 serveur-application/vagrant-rsync/application-console/__*
 serveur-application/vagrant-rsync/application-console/venv/*
+serveur-application/vagrant-rsync/application-api/.*
+serveur-application/vagrant-rsync/application-api/__*
+serveur-application/vagrant-rsync/application-api/venv/*
+serveur-application/vagrant-rsync/application-console/build/*

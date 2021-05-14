@@ -1,0 +1,45 @@
+task purge(type:Delete) {
+  //println 'Cleaning up old files'
+  delete 'build'
+}
+
+task dependances(type:Exec, dependsOn: purge) {
+    executable 'sh'
+    args '-c', 'pip3 install flask'
+    standardOutput = new ByteArrayOutputStream()
+    ext.output = { return standardOutput.toString() }
+}
+
+task testcodepycodestyle(type:Exec) {
+     executable 'sh'
+     args '-c', 'flake8 --tee --output-file=output.txt src/'
+     'ignoreExitValue true'
+}
+
+def tarfile = "application-" + version
+
+task packageDistribution(type: Zip, dependsOn: dependances) {
+    from ('src') { into '.' }
+    archiveFileName = tarfile + ".zip"
+    destinationDirectory = file("build")
+}
+
+task readGradlePropertiesFileUpVersion() {
+    mustRunAfter purge
+    String min=version.substring(version.lastIndexOf('.')+1)
+    min=min.toInteger()+1
+    String major=version.substring(0,version.length()-1)
+    def new_version = major+min
+    def var = new Properties()
+    File myfile = file("gradle.properties")
+    var.load(myfile.newDataInputStream())
+    var.setProperty("version", new_version)
+    var.store(myfile.newWriter(), null)
+}
+
+task up(type:Exec, dependsOn: packageDistribution) {
+ executable 'sh'
+ standardOutput = new ByteArrayOutputStream()
+ args '-c' 'echo "lol"'
+ ext.output = { return standardOutput.toString() }
+}

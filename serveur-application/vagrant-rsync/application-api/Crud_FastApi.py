@@ -39,15 +39,27 @@ def return_index_machine(hostname):
             return machine
 
 
-def is_valid_ipv4_address(address):
-    try:
-        socket.inet_pton(socket.AF_INET, address)
-    except AttributeError:
-        try:
-            socket.inet_aton(address)
-        except socket.error:
-            return False
-        return address.count('.') == 3
-    except socket.error:
-        return False
-    return True
+def is_exists_machine(hostname):
+    for machine in range(len(listMachinesFomFile)):
+        if listMachinesFomFile[machine]["hostname"] == hostname:
+            return True
+    return False
+
+
+def is_valid_ipv4_address(ip):
+    """
+            Verifier si l'adresse ip est conforme
+        :param ip: on récupère l'adresse ip saisi par l'utilisateur
+        :return:
+        """
+    valid_or_not_valid = False
+    tmp_ip = ip.split(".")
+    i = 0
+    if ip.count('.') == 3:
+        valid_or_not_valid = True
+    while valid_or_not_valid and i < len(tmp_ip):
+        valid_or_not_valid = tmp_ip[i].isnumeric()
+        i += 1
+    if not valid_or_not_valid:
+        print("Adresse ip invalid")
+    return valid_or_not_valid
