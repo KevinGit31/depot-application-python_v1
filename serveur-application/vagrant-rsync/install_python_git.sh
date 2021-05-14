@@ -26,6 +26,6 @@ apt remove -y python
 ln -s /usr/bin/python3 /usr/bin/python
 echo "alias pip=pip3" > ~/.bashrc
 
-#install utilitaire de test dont flask pour expostion de l'api
+#install utilitaire de test dont flask et fastapi pour expostion de l'api
 pip install flask pytest 
-#pip install fastapi
+pip install fastapi uvicorn
