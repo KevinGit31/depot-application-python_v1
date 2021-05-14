@@ -19,7 +19,7 @@ Le document va se présenter en 3 parties:
 
 ## Architecture Applicative
 
-![Architecture Applicative.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/develop/diagramme/Architecture_Applicative.png "Diagramme.")
+![Architecture Applicative.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/Architecture_Applicative.png "Diagramme.")
 
 ## Diagramme UML
 
@@ -71,7 +71,7 @@ Tapez la commande suivante pour lancer le script et valider
 ```
 sudo ./install_python_git.sh
 ```
-> Installe Tous les composants nécessaires
+> Installe tous les composants nécessaires
 > 
 >> Python3 python3-dev python3-pip git, flask pytest, fastapi, uvicorn
 >
