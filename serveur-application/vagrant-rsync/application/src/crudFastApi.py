@@ -1,14 +1,14 @@
 from fastapi.encoders import jsonable_encoder
 import socket
 
-import Machine
+from Machine import MachineFastApi
 import bdd_file
 
 listMachinesFomFile = []
 listMachinesFomFile = bdd_file.read_bd()
 
 
-def create_machine(machine: Machine):
+def create_machine(machine: MachineFastApi):
     machine_dict = machine.dict()
     listMachinesFomFile.append(machine_dict)
     return bdd_file.write_bd(listMachinesFomFile)
@@ -22,7 +22,7 @@ def get_machine(hostname):
     return listMachinesFomFile[return_index_machine(hostname)]
 
 
-def update_machine(hostname, machine: Machine):
+def update_machine(hostname, machine: MachineFastApi):
     update_item_encoded = jsonable_encoder(machine)
     listMachinesFomFile[return_index_machine(hostname)] = update_item_encoded
     bdd_file.write_bd(listMachinesFomFile)

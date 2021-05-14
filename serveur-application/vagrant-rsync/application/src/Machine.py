@@ -1,5 +1,8 @@
+from pydantic import BaseModel
+from typing import Optional
+
+
 class Machine:
-    
     def __init__(self, hostname, ip, nombre_cpu, taille_ram, nombre_disque_dur, taille_disque_dur, os, version_os):
         self._id = id
         self._hostname = hostname
@@ -42,3 +45,14 @@ class Machine:
     @property
     def version_os(self):
         return self._version_os
+
+
+class MachineFastApi(BaseModel):
+    hostname: str
+    ip: str
+    nombre_cpu: int
+    taille_ram: int
+    nombre_disque_dur: int
+    taille_disque_dur: int
+    os: str
+    version_os: str

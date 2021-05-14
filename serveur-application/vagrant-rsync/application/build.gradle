@@ -1,0 +1,50 @@
+task purge(type:Delete) {
+  //println 'Cleaning up old files'
+  delete 'build'
+}
+
+task dependances(type:Exec, dependsOn: purge) {
+    executable 'sh'
+    args '-c', 'pip3 install flask'
+    standardOutput = new ByteArrayOutputStream()
+    ext.output = { return standardOutput.toString() }
+}
+
+task testcodepycodestyle(type:Exec) {
+     executable 'sh'
+     args '-c', 'flake8 --tee --output-file=output.txt src/'
+     'ignoreExitValue true'
+}
+
+def tarfile = "application-" + version
+
+task packageDistribution(type: Zip, dependsOn: dependances) {
+    from ('src') { into '.' }
+    archiveFileName = tarfile + ".zip"
+    destinationDirectory = file("build")
+}
+
+task up(type:Exec, dependsOn: packageDistribution) {
+     commandLine 'sh', './script.sh'
+}
+
+task readGradlePropertiesFileUpVersion(dependsOn: up) {
+    doLast {
+        String min=version.substring(version.lastIndexOf('.')+1)
+        int intmin = Integer.parseInt(min)
+        min=intmin + 1
+        String major=version.substring(0,2)
+        def new_version = major+min
+        def var = new Properties()
+        File myfile = file("gradle.properties")
+        var.load(myfile.newDataInputStream())
+        var.setProperty("version", new_version)
+        var.store(myfile.newWriter(), null)
+        ant.replaceregexp(
+          file:  "script.sh",
+          match:   "version="+version,
+          replace: "version="+new_version,
+          byline:  "true"
+        )
+    }
+}

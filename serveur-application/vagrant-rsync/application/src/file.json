@@ -78,15 +78,5 @@
         "taille_disque_dur": 0,
         "os": "string",
         "version_os": "string"
-    },
-    {
-        "hostname": "string",
-        "ip": "142.5.1.78",
-        "nombre_cpu": 0,
-        "taille_ram": 0,
-        "nombre_disque_dur": 0,
-        "taille_disque_dur": 0,
-        "os": "string",
-        "version_os": "string"
     }
 ]
