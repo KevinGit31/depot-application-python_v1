@@ -1,0 +1,92 @@
+[
+    {
+        "hostname": "inversion",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "michael",
+        "ip": "124.0.0.1",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "parc",
+        "ip": "124.0.0.1",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "parfait",
+        "ip": "124.0.0.1",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "exemple",
+        "ip": "12.2.0.1",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "apitest",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "inversion",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "inversion",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "inversion",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    }
+]
