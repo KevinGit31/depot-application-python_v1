@@ -54,7 +54,7 @@ async def create_machine(machine: MachineFastApi):
     :return: machine
     """
     if Crud_FastApi.is_exists_machine(machine.hostname):
-        http_exception(400, "Machine already  exists", "My Error")
+        http_exception(400, "Machine already exists", "My Error")
     else:
         if Crud_FastApi.is_valid_ipv4_address(machine.ip):
             Crud_FastApi.create_machine(machine)

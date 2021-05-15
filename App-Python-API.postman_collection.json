@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "4f3daeb6-5a65-4d84-a3ad-9f1cb3931b15",
+		"name": "App-Python-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Machines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/machines",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"machines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Machine by hostname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/machine/inversion",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"machine",
+						"inversion"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Machin by hostname",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"hostname\": \"testput\",\r\n  \"ip\": \"127.1.12.14\",\r\n  \"nombre_cpu\": 0,\r\n  \"taille_ram\": 0,\r\n  \"nombre_disque_dur\": 0,\r\n  \"taille_disque_dur\": 0,\r\n  \"os\": \"string\",\r\n  \"version_os\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/machine/machine1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"machine",
+						"machine1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Machine by hostname",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/machine/machine2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"machine",
+						"machine2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Machine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"hostname\": \"machine12\",\r\n  \"ip\": \"124.0.1.12\",\r\n  \"nombre_cpu\": 0,\r\n  \"taille_ram\": 15,\r\n  \"nombre_disque_dur\": 0,\r\n  \"taille_disque_dur\": 0,\r\n  \"os\": \"string\",\r\n  \"version_os\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/machine",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"machine"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

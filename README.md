@@ -82,7 +82,7 @@ sudo ./install_python_git.sh
 ## Installation du serveur jenkins
 
 Pour pouvoir installer le serveur applicatif, il vous faudra aller dans le 
-répertoire /serveur-application/.
+répertoire /serveur-integration/.
 
 Une fois dans le répertoire, vous verrez un fichier VagrantFile
 
@@ -158,7 +158,7 @@ sudo install_python_gradle_git.sh
 ## Installation du serveur nexus
 
 Pour pouvoir installer le serveur applicatif, il vous faudra aller dans le 
-répertoire /serveur-application/.
+répertoire /serveur-nexus/.
 
 Une fois dans le répertoire, vous verrez un fichier VagrantFile
 

@@ -10,14 +10,14 @@
         "version_os": "string"
     },
     {
-        "hostname": "michael",
-        "ip": "124.0.0.1",
-        "nombre_cpu": 0,
-        "taille_ram": 0,
-        "nombre_disque_dur": 0,
-        "taille_disque_dur": 0,
-        "os": "string",
-        "version_os": "string"
+        "hostname": "michaelupdatetest",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 12,
+        "taille_ram": 6,
+        "nombre_disque_dur": 4,
+        "taille_disque_dur": 98,
+        "os": "osmichaelupdatetest",
+        "version_os": "4"
     },
     {
         "hostname": "parc",
@@ -98,5 +98,45 @@
         "taille_disque_dur": 0,
         "os": "string",
         "version_os": "string"
+    },
+    {
+        "hostname": "apitest",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "apitestmahine",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 12,
+        "taille_ram": 6,
+        "nombre_disque_dur": 4,
+        "taille_disque_dur": 98,
+        "os": "osapitestmahine",
+        "version_os": "4"
+    },
+    {
+        "hostname": "michaelupdatetest",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 12,
+        "taille_ram": 6,
+        "nombre_disque_dur": 4,
+        "taille_disque_dur": 98,
+        "os": "osmichaelupdatetest",
+        "version_os": "4"
+    },
+    {
+        "hostname": "michaelupdatetest",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 12,
+        "taille_ram": 6,
+        "nombre_disque_dur": 4,
+        "taille_disque_dur": 98,
+        "os": "osmichaelupdatetest",
+        "version_os": "4"
     }
 ]
