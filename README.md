@@ -25,6 +25,39 @@ Le document va se présenter en 3 parties:
 
 ![Diagramme UML.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/Diagramme_Classe.png "Diagramme.")
 
+## Installation des Pré-requis
+
+**Vérifier l'installation de git**
+
+* Ouvrir une invite de commande cmd sous Windows et taper la commande suivante (voir image) 
+```
+git --version
+```
+![CMD.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/cmd.PNG "Diagramme.")
+
+* Si pas d'install git, suivre le lien 
+[d'installation de Git](https://git-scm.com/downloads).
+
+**Une fois l'installation de git faite**
+
+* Créez un dossier sous Windows
+* Allez dans le dossier
+* Ouvrir une "invite de commandes bash". Pour cela faite un clic droit avec 
+votre souris et cliquer sur "Git bash here" (voir image).
+
+![invite bash.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/invit-bash.PNG "Diagramme.")
+
+Une fenêtre va alors s'ouvrir (voir image) 
+
+![Fenêtre.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/fenetre-bash.PNG "Diagramme.")
+
+* Faire un git clone de notre depot git en tapant la commande suivante
+```
+git clone https://github.com/KevinGit31/depot-application-python_v1.git
+```
+
+**Vous êtes prêt à tester notre application**
+
 ## Installation du serveur d'application python
 
 Pour pouvoir installer le serveur applicatif, il vous faudra aller dans le 
@@ -133,7 +166,7 @@ sudo ./provision.sh
 > 
 >> gnupg, gnupg2, gnupg1, openjdk-11-jdk et jenkins
 >
-> Créer un utilisateur userjob
+> création d'un utilisateur userjob
 >
 >>Donne les droits apt au userjob
 >
