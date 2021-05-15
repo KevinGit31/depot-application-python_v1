@@ -4,7 +4,7 @@
 set -u # en cas de variable non définit, arreter le script
 set -e # en cas d'erreur (code de retour non-zero) arreter le script
 
-version=1.6
+version=1.7
 
 echo "$version"
 

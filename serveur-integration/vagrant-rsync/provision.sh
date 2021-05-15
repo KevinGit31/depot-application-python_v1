@@ -120,6 +120,15 @@ ps_display_ipadress_machine(){
     ip a | grep eth1 | grep inet | awk -F "/" '{print $1}' | awk -F " " '{print $2}'
     echo "*******************************"
 }
+ps_install_webhook_relay(){
+    wget -O /usr/local/bin/relay https://storage.googleapis.com/webhookrelay/downloads/relay-linux-amd64
+	sudo chmod +wx /usr/local/bin/relay
+	sudo relay login -k d8732914-8199-4198-a8c1-68be1cf8a290 -s Zu7hTxK9QwgN
+	## export RELAY_KEY=d8732914-8199-4198-a8c1-68be1cf8a290
+	## export RELAY_SECRET=Zu7hTxK9QwgN
+	sleep 10s
+}
+
 
 ### POINT D'ENTRER DU SCRIPT ###
 
@@ -156,3 +165,10 @@ ps_display_initialAdminPassword
 ps_display_ipadress_machine
 echo ""
 echo "Success"
+
+echo ""
+echo "Please waiting for installation webhook relay"
+ps_install_webhook_relay
+relay forward --bucket github-jenkins http://172.30.1.3:8080/github-webhook/
+
+
