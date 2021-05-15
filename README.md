@@ -25,6 +25,17 @@ Le document va se présenter en 3 parties:
 
 ![Diagramme UML.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/Diagramme_Classe.png "Diagramme.")
 
+## Installation des Pré-requis
+
+1. Vérifier l'installation de git
+
+Ouvrir une invite de commande cmd sous windows et taper la commande suivante
+```
+git --version
+```
+TODO Image
+* Item 1
+
 ## Installation du serveur d'application python
 
 Pour pouvoir installer le serveur applicatif, il vous faudra aller dans le 
