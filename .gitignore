@@ -8,4 +8,4 @@ serveur-application/vagrant-rsync/application/venv/*
 serveur-application/venv/*
 serveur-application/venv
 serveur-application/vagrant-rsync/application/build/*
-serveur-application/vagrant-rsync/application/src/__*
+application/src/__*

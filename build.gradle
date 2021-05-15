@@ -5,7 +5,7 @@ task purge(type:Delete) {
 
 task dependances(type:Exec, dependsOn: purge) {
     executable 'sh'
-    args '-c', 'pip3 install flask'
+    args '-c', 'pip3 install flask fastapi uvicorn'
     standardOutput = new ByteArrayOutputStream()
     ext.output = { return standardOutput.toString() }
 }
@@ -19,7 +19,7 @@ task testcodepycodestyle(type:Exec) {
 def tarfile = "application-" + version
 
 task packageDistribution(type: Zip, dependsOn: dependances) {
-    from ('src') { into '.' }
+    from ('./application/src') { into '.' }
     archiveFileName = tarfile + ".zip"
     destinationDirectory = file("build")
 }
