@@ -156,10 +156,18 @@ sudo ./install_python_git.sh
 >>  Active le port 8000 
 
 
-###  Installation et fonctionnement de l'application console
+###  Installation et fonctionnement de l'application console et API
 
 Notre application python se découpe en deux applications une première application qui s'exécute sur la console et une autre qui va s'exécuter via le serveur "fastApi".
 L'application python se trouvera dans un fichier zip ( ex: application-1.7.zip) qui se trouve à la racine du projet que vous avez "clone" auparavant.
+
+L'application fonctionne de la manière suivante:
+- Elle va permettre à l'utilisateur de lister les machines présentes sous son parc informatique
+- Elle va permettre à l'utilisateur de d'afficher les détails d'une machine en saisissant son "hostname"
+- Elle va permettre d'ajouter une nouvelle machine dans son parc informatique en saisissant les informations qu'il faut
+- Elle va permettre de supprimer une machine existante en saisissant son "hostname"
+- Elle va permettre de modifier les caractéristiques d'une machines en saisissant son "hostname"
+- Elle va permettre aussi de lister toutes les applications qui sont disponibles sur notre nexus repository (si nexus disponible, une capture d'écran avec le nexus up)
 
 Mettez-vous dans le repertoire suivant "depot-application-python_v1" puis faite un clique droit et cliquer sur "git bash here.
 
@@ -168,6 +176,7 @@ Mettez-vous dans le repertoire suivant "depot-application-python_v1" puis faite 
 ![invite bash.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/invit-bash.PNG "Diagramme.")
 
 Alors une fenêtre bash va s'ouvrir.
+
 ![fenetre-project.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/reamde_part2/diagramme/fenetre-project.PNG "fenetre-project.PNG")
 
 Tapez les commandes suivantes pour pouvoir installer l'application sur le serveur d'application.
@@ -192,11 +201,13 @@ Cette commande a pour but de lancer le serveur
 ````
 vagrant ssh
 ````
-Cette commande a pour but de se connecter à notre serveur d'application (image)
+Cette commande a pour but de se connecter à notre serveur d'application
 ````
 cd /home/rsync/
 ````
 Cette commande a pour but de nous amener dans le répertoire où notre application a été installé.
+
+**Test Application python avec la console**
 
 Une fois dans le répertoire /home/rsync/, nous allons lancer notre application console python, pour cela on va lancer la commande suivante:
 ````
@@ -204,17 +215,11 @@ python main.py
 ````
 ![Application console.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/fenetre-bash-application-console-repos.PNG "Application console.")
 
-L'application fonctionne de la manière suivante:
-- Elle va permettre à l'utilisateur de lister les machines présentes sous son parc informatique
-- Elle va permettre à l'utilisateur de d'afficher les détails d'une machine en saisissant son "hostname"
-- Elle va permettre d'ajouter une nouvelle machine dans son parc informatique en saisissant les informations qu'il faut
-- Elle va permettre de supprimer une machine existante en saisissant son "hostname"
-- Elle va permettre de modifier les caractéristiques d'une machines en saisissant son "hostname"
-- Elle va permettre aussi de lister toutes les applications qui sont disponibles sur notre nexus repository (si nexus disponible, une capture d'écran avec le nexus up) ![Application console.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/fenetre-bash-application-console-repos.PNG "fenetre-bash-application-console-repos")
+
+![Application console.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/fenetre-bash-application-console-repos.PNG "fenetre-bash-application-console-repos")
 
 
-### Test Application python avec l'API FastApi
-
+**Test Application python avec l'API FastApi**
 
 Pour pouvoir tester l'application avec FastApi, il va vous falloir un Environnement de développement (IED) de votre choix qui peut exécuter du code python. Quelques exemples (Visual studio code, PyCharm).
 
@@ -226,12 +231,12 @@ Si vous n'avez pas d'IDE, suivre le lien d'installation de votre choix
 [d'installation de pyCharm](https://www.jetbrains.com/fr-fr/pycharm/).
 
 Une fois votre IDE installé, ouvrer le et importer le projet python qui se trouve
-dans le répertoire /application/src/.
+dans le répertoire /serveur-application/vagrant-rsync/.
 
 * Importer le projet sur Visual studio code (VSC)
 
 Une fois sur VSC, faire un clic sur ***File*** puis ***Open Folder*** et ouvrer le 
-dossier /application/. (voir image).
+dossier /serveur-application/vagrant-rsync/. (voir image).
 
 ![vsc import.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/vsc-import.png "Diagramme.")
 
@@ -287,6 +292,7 @@ applicaton python](http://127.0.0.1:8000/docs) pour acceder à Swagger API (voir
 ![Swagger API.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/Swagger.PNG "Diagramme.")
 
 
+
 ## Installation du serveur jenkins
 
 Pour pouvoir installer le serveur applicatif, il vous faudra aller dans le 
@@ -329,6 +335,10 @@ dos2unix provision.sh
 ```
 Elle a pour but de convertir provision.sh au fomat unix
 ```
+dos2unix install_webhook_relay.sh
+```
+Elle a pour but de convertir install_webhook_relay.sh au fomat unix
+```
 dos2unix install_python_gradle_git.sh
 ```
 Elle a pour but de convertir install_python_gradle_git.sh au fomat unix
@@ -352,9 +362,20 @@ sudo ./provision.sh
 > 
 >>  Active les ports 8080 et OpenSSH 
 
+
 Tapez la commande suivante pour lancer le script et valider
 ```
-sudo install_python_gradle_git.sh
+sudo ./install_webhook_relay.sh
+```
+
+> Installe tous les composants nécessaires 
+> 
+>> Webhook Relay
+>
+
+Tapez la commande suivante pour lancer le script et valider
+```
+sudo install_python_gradle_git.sh 
 ```
 > Installe tous les composants nécessaires 
 > 
