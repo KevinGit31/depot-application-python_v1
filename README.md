@@ -58,6 +58,8 @@ git clone https://github.com/KevinGit31/depot-application-python_v1.git
 
 **Vous êtes prêt à tester notre application**
 
+
+
 ## Installation du serveur d'application python
 
 Pour pouvoir installer le serveur applicatif, il vous faudra aller dans le 
@@ -110,7 +112,79 @@ sudo ./install_python_git.sh
 >
 > Installe UFW pour la confiration du pare-feu
 > 
->>  Active les ports 8000 et OpenSSH 
+>>  Active le port 8000 
+
+
+#### Test Application python avec l'API FastApi
+
+
+Pour pouvoir tester l'application avec FastApi, il va vous falloir un Environnement de développement (IED) de votre choix qui peut exécuter du code python. Quelques exemples (Visual studio code, PyCharm).
+
+Si vous n'avez pas d'IDE, suivre le lien d'installation de votre choix
+
+* Lien
+[d'installation visual studio code](https://code.visualstudio.com/download).
+* Lien
+[d'installation de pyCharm](https://www.jetbrains.com/fr-fr/pycharm/).
+
+Une fois votre IDE installé, ouvrer le et importer le projet python qui se trouve
+dans le répertoire /application/src/. (voir image).
+
+* Importer le projet sous Visual studio code (VSC)
+
+Une fois sur VSC, faire un clic sur ***File*** puis ***Open Folder*** et ouvrer le 
+dossier /application/
+
+TODO image
+
+**Exécution de l'application python** 
+
+Ouvrer le fichier ***mainFastApi.py*** et cliquer sur le bouton **1** (voir image).
+
+TODO image
+
+**l'Application est prête à être testé**
+
+* Importer le projet sous PyCharm
+
+TODO image
+
+**Nous allons tester notre application sur Postman**
+
+Si Postman n'est pas encore installé, suivre le lien [d'installation](https://www.postman.com/downloads/).
+
+Ouvrir Postman une fois installé et cliquer ***My Workspace*** puis sur ***Collections*** => ***Import*** => ***File*** => ***Upload Files** 
+
+Importer le fichier ***App-Python-API.postman_collection.json*** qui se trouve dans
+le repètoire /depot-application-python_v1/ (voir image)
+
+TODO image
+
+Test API Get All machines
+
+TODO image
+
+Test API Get machine by hostname
+
+TODO image
+
+Test API Update machine by hostname
+
+TODO image
+
+Test API Delete machine by hostname
+
+TODO image
+
+Test API Create machine
+
+TODO image
+
+
+* Documentation Swagger API
+
+
+
 
 ## Installation du serveur jenkins
 
