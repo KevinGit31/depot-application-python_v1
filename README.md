@@ -123,7 +123,7 @@ Pour pouvoir tester l'application avec FastApi, il va vous falloir un Environnem
 Si vous n'avez pas d'IDE, suivre le lien d'installation de votre choix
 
 * Lien
-[d'installation visual studio code](https://code.visualstudio.com/download).
+[d'installation de visual studio code](https://code.visualstudio.com/download).
 * Lien
 [d'installation de pyCharm](https://www.jetbrains.com/fr-fr/pycharm/).
 
@@ -186,8 +186,7 @@ Test API Create machine
 L'application étant toujours démarrée sur VSC ou PyCharm, cliquer sur ce lien [documentation 
 applicaton python](http://127.0.0.1:8000/docs) pour acceder à Swagger API (voir image) 
 
-TODO image
-
+![Swagger API.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/Swagger.PNG "Diagramme.")
 
 
 ## Installation du serveur jenkins
