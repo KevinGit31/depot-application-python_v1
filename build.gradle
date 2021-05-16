@@ -25,8 +25,7 @@ task packageDistribution(type: Zip, dependsOn: dependances) {
 }
 
 task up(type:Exec, dependsOn: packageDistribution) {
-     commandLine 'sh', './script.sh'
-     commandLine 'sh', './scriptGit.sh'
+     commandLine 'sh', './script.sh scriptGit.sh'
 }
 
 task readGradlePropertiesFileUpVersion(dependsOn: up) {
