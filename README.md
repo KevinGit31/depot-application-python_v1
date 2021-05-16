@@ -128,61 +128,65 @@ Si vous n'avez pas d'IDE, suivre le lien d'installation de votre choix
 [d'installation de pyCharm](https://www.jetbrains.com/fr-fr/pycharm/).
 
 Une fois votre IDE installé, ouvrer le et importer le projet python qui se trouve
-dans le répertoire /application/src/. (voir image).
+dans le répertoire /application/src/.
 
-* Importer le projet sous Visual studio code (VSC)
+* Importer le projet sur Visual studio code (VSC)
 
 Une fois sur VSC, faire un clic sur ***File*** puis ***Open Folder*** et ouvrer le 
-dossier /application/
+dossier /application/. (voir image).
 
-TODO image
+![vsc import.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/vsc-import.png "Diagramme.")
 
 **Exécution de l'application python** 
 
 Ouvrer le fichier ***mainFastApi.py*** et cliquer sur le bouton **1** (voir image).
 
-TODO image
+![vsc run.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/vsc-run.png "Diagramme.")
 
 **l'Application est prête à être testé**
 
-* Importer le projet sous PyCharm
+* Importer le projet sur PyCharm
 
-TODO image
+TODO
 
 **Nous allons tester notre application sur Postman**
 
 Si Postman n'est pas encore installé, suivre le lien [d'installation](https://www.postman.com/downloads/).
 
-Ouvrir Postman une fois installé et cliquer ***My Workspace*** puis sur ***Collections*** => ***Import*** => ***File*** => ***Upload Files** 
+Ouvrir Postman une fois installé et cliquer ***My Workspace*** puis sur ***Collections*** => ***Import*** => ***File*** => ***Upload Files***
 
 Importer le fichier ***App-Python-API.postman_collection.json*** qui se trouve dans
 le repètoire /depot-application-python_v1/ (voir image)
 
-TODO image
+![import postman.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/Postman.PNG "Diagramme.")
 
 Test API Get All machines
 
-TODO image
+![get machines.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/getMachines.PNG "Diagramme.")
 
 Test API Get machine by hostname
 
-TODO image
+![Get machine by hostname.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/getMachineByHostname.PNG "Diagramme.")
 
 Test API Update machine by hostname
 
-TODO image
+![Update machine by hostname.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/updateMachineByHostname.PNG "Diagramme.")
 
 Test API Delete machine by hostname
 
-TODO image
+![Delete machine by hostname.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/deleteMachineByHostname.PNG "Diagramme.")
 
 Test API Create machine
 
-TODO image
+![Create machine.](https://raw.githubusercontent.com/KevinGit31/depot-application-python_v1/readme/diagramme/createMachine.PNG "Diagramme.")
 
 
 * Documentation Swagger API
 
+L'application étant toujours démarrée sur VSC ou PyCharm, cliquer sur ce lien [documentation 
+applicaton python](http://127.0.0.1:8000/docs) pour acceder à Swagger API (voir image) 
+
+TODO image
 
 
 
