@@ -1,0 +1,92 @@
+[
+    {
+        "hostname": "inversion",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "michaelupdatetest",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 12,
+        "taille_ram": 6,
+        "nombre_disque_dur": 4,
+        "taille_disque_dur": 98,
+        "os": "osmichaelupdatetest",
+        "version_os": "4"
+    },
+    {
+        "hostname": "parc",
+        "ip": "124.0.0.1",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "parfait",
+        "ip": "124.0.0.1",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "testput",
+        "ip": "127.1.12.14",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "machine1",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "machine5",
+        "ip": "125.0.0.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "string",
+        "ip": "142.5.1.78",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    },
+    {
+        "hostname": "exemple12",
+        "ip": "124.0.1.12",
+        "nombre_cpu": 0,
+        "taille_ram": 0,
+        "nombre_disque_dur": 0,
+        "taille_disque_dur": 0,
+        "os": "string",
+        "version_os": "string"
+    }
+]

@@ -1,0 +1,11 @@
+serveur-integration/.*
+serveur-nexus/.*
+serveur-application/.*
+serveur-application/disk2.vdi
+serveur-application/vagrant-rsync/application/.*
+serveur-application/vagrant-rsync/application/__*
+serveur-application/vagrant-rsync/application/venv/*
+serveur-application/venv/*
+serveur-application/venv
+serveur-application/vagrant-rsync/application/build/*
+application/src/__*
